@@ -40,40 +40,40 @@ describe('1 - Verify User Log In Functionality', () => {
         login_page.getUsername().type(username);
         login_page.getPassword().type(password);
         login_page.getLoginButton().click();
-        menu_validations.verifySellTab();
+        menu_validations.verifyTab('sell');
     });
 })
 
 // describe('2 - Verify Navigation Menu', () => {
 //     it('Verify User is Able to Navigate through Menu', () => {
 //         navigation_menu.getMenuTab('salesTab').click();
-//         menu_validations.verifySellTab();
+//         menu_validations.verifyTab('sell');
 //         navigation_menu.getMenuTab('manufacturingTab').click();
-//         menu_validations.verifyMakeTab();
+//         menu_validations.verifyTab('make');
 //         navigation_menu.getMenuTab('purchaseTab').click();
-//         menu_validations.verifyBuyTab();
+//         menu_validations.verifyTab('buy');
 //         navigation_menu.getMenuTab('warehouseTab').click();
-//         menu_validations.verifyStockTab();
+//         menu_validations.verifyTab('stock');
 //         navigation_menu.getMenuTab('portfolioTab').click();
-//         menu_validations.verifyItemsTab();
+//         menu_validations.verifyTab('items');
 //         navigation_menu.getMenuTab('contactsTab').click();
-//         menu_validations.verifyContactsTab();
+//         menu_validations.verifyTab('contacts');
 //         navigation_menu.getMenuTab('settingsTab').click();
-//         menu_validations.verifySettingsTab();
+//         menu_validations.verifyTab('settings');
 //         navigation_menu.getProfileButton().click();
 //         navigation_menu.getProfileTab('account').click();
-//         menu_validations.verifyAccountTab();
+//         menu_validations.verifyTab('account');
 //         navigation_menu.getProfileTab('team').click();
-//         menu_validations.verifyTeamTab();
+//         menu_validations.verifyTab('team');
 //         navigation_menu.getProfileTab('subscription').click();
-//         menu_validations.verifySubscriptionTab();
+//         menu_validations.verifyTab('subscription');
 //     });
 // })
 
 describe('3 - Verify Search Functionality', () => {
     it('Verify User is Able to Search Successfully', () => {
         navigation_menu.getMenuTab('salesTab').click();
-        menu_validations.verifySellTab();
+        menu_validations.verifyTab('sell');
     });
 })
 
