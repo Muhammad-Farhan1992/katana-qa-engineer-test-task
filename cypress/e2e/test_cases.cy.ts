@@ -5,12 +5,17 @@ import globalAdd from "../support/page_objects/global_add";
 import loginValidations from "../support/validation_functions/login_validations";
 import navigationMenu from "../support/page_objects/navigation_menu";
 import menuValidations from "../support/validation_functions/menu_validations";
+import searchField from "../support/page_objects/search_fields";
+import searchValidations from "../support/validation_functions/search_validations";
 
 const login_page = new loginPage();
 const global_add = new globalAdd();
 const navigation_menu = new navigationMenu();
+const search_field = new searchField();
+
 const login_validations = new loginValidations();
 const menu_validations = new menuValidations();
+const search_validations = new searchValidations();
 
 describe('1 - Verify User Log In Functionality', () => {
     let loginURL: any;
@@ -70,19 +75,43 @@ describe('1 - Verify User Log In Functionality', () => {
 //     });
 // })
 
-describe('3 - Verify Search Functionality', () => {
-    it('Verify User is Able to Search Successfully', () => {
-        navigation_menu.getMenuTab('salesTab').click();
-        menu_validations.verifyTab('sell');
-    });
-})
-
-// describe('1 - Verify Global Add Functionality', () => {
-//     it('Verify User is Redirecting to Specific Category Successfully', () => {
-//         global_add.getGlobalAdd().click();
-//         global_add.getGlobalType('add-quote').click();
+// describe('3 - Verify Search Functionality', () => {
+//     it('Verify User is Able to Search Successfully', () => {
+//         navigation_menu.getMenuTab('salesTab').click();
+//         menu_validations.verifyTab('sell');
+//         search_field.getSearchField('orderNoFilterInput').clear().type('SO-1 [DEMO]');
+//         search_validations.verifySearchResults();
+//         search_field.getClearFilters().click();
+//         search_field.getSearchField('customerNameFilterInput').clear().type('Jane Rooms [DEMO]');
+//         search_validations.verifySearchResults();
+//         search_field.getClearFilters().click();
+//         search_field.getSearchField('totalAmountFilterInput').clear().type('1500');
+//         search_validations.verifySearchResults();
+//         search_field.getClearFilters().click();
+//         search_field.getSearchField('floatingDateFilter').click();
+//         navigation_menu.getProfileTab('allDates').click();
+//         search_validations.verifySearchResults();
+//         search_field.getSearchField('availabilityFilterInput').clear().type('In stock');
+//         search_validations.verifySearchResults();
+//         search_field.getClearFilters().click();
+//         search_field.getSearchField('materialAvailabilityFilterInput').clear().type('Processed');
+//         search_validations.verifySearchResults();
+//         search_field.getClearFilters().click();
+//         search_field.getSearchField('productionStatusFilterInput').clear().type('Done');
+//         search_validations.verifySearchResults();
+//         search_field.getClearFilters().click();
+//         search_field.getSearchField('statusFilterInput').clear().type('Not shipped');
+//         search_validations.verifySearchResults();
+//         search_field.getClearFilters().click();
 //     });
 // })
+
+describe('4 - Verify Global Add Functionality', () => {
+    it('Verify User is Redirecting to Specific Category Successfully', () => {
+        global_add.getGlobalAdd().click();
+        global_add.getGlobalType('add-quote').click();
+    });
+})
 
 // describe('2 - Verify Logout Functionality', () => {
 //     it('Verify User is Able to Log Out Successfully', () => {
