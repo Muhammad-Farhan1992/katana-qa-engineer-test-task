@@ -1,0 +1,23 @@
+{
+  "name": "katana-qa-engineer-test-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muhammad-Farhan1992/katana-qa-engineer-test-task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muhammad-Farhan1992/katana-qa-engineer-test-task/issues"
+  },
+  "homepage": "https://github.com/Muhammad-Farhan1992/katana-qa-engineer-test-task#readme",
+  "dependencies": {
+    "cypress": "^10.3.0",
+    "typescript": "^4.7.4"
+  }
+}
