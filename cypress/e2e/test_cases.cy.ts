@@ -7,22 +7,28 @@ import navigationMenu from "../support/page_objects/navigation_menu";
 import menuValidations from "../support/validation_functions/menu_validations";
 import searchField from "../support/page_objects/search_fields";
 import searchValidations from "../support/validation_functions/search_validations";
+import addQuote from "../support/page_objects/add_quotes";
+import addressCommonFunctions from "../support/common_functions/address_functions";
+import quoteValidations from "../support/validation_functions/quote_validations";
 
 const login_page = new loginPage();
 const global_add = new globalAdd();
 const navigation_menu = new navigationMenu();
 const search_field = new searchField();
+const add_quote = new addQuote();
+const add_address = new addressCommonFunctions();
 
 const login_validations = new loginValidations();
 const menu_validations = new menuValidations();
 const search_validations = new searchValidations();
+const quote_validations = new quoteValidations();
 
 describe('1 - Verify User Log In Functionality', () => {
     let loginURL: any;
     let username: any;
     let password: any;
     let wrongPassword: any;
-    
+
     before(() => {
         loginURL = Cypress.env('loginBaseURL') + Cypress.env('login');
         username = Cypress.env('username');
@@ -106,10 +112,54 @@ describe('1 - Verify User Log In Functionality', () => {
 //     });
 // })
 
-describe('4 - Verify Global Add Functionality', () => {
-    it('Verify User is Redirecting to Specific Category Successfully', () => {
-        global_add.getGlobalAdd().click();
-        global_add.getGlobalType('add-quote').click();
+// describe('4 - Verify Global Add Functionality', () => {
+//     it('Verify User is able to Add Successfully', () => {
+//         cy.fixture('quote_data.json').then((quote_data) => {
+//             cy.fixture('address_data.json').then((address_data) => {
+//                 cy.log(quote_data.customer);
+//                 cy.log(quote_data.deliveryDate);
+//                 global_add.getGlobalAdd().click();
+//                 global_add.getGlobalType('add-quote').click();
+//                 menu_validations.verifyTab('quote');
+//                 cy.wait(3000);
+//                 add_quote.getCustomerField().clear().type(quote_data.customer);
+//                 add_quote.getExisitngName(quote_data.customer).click();
+//                 add_quote.getField('deliveryDate').click();
+//                 add_quote.getDeliveryDeadline().click();
+//                 add_quote.getField('createdDate').click();
+//                 add_quote.getCreatedDate().click();
+//                 add_quote.getField('orderNo').clear().type(quote_data.salesOrder);
+//                 add_quote.getAddress('address-field-new').click();
+//                 add_address.enterAddress(address_data);
+//                 add_quote.getAddress('address-field-same').click();
+//                 add_address.enterAddress(address_data);
+//                 add_quote.getItemFields('variant-cell-renderer').type(quote_data.item);
+//                 cy.wait(3000);
+//                 add_quote.getExisitngName(quote_data.item).click();
+//                 add_quote.getCloseButton().click();
+//                 menu_validations.verifyTab('quotes');
+//                 quote_validations.verifyQuoteAddition();
+//             })
+//         })
+//     });
+// })
+
+// describe('5 - Verify Delete Functionality', () => {
+//     it('Verify User is able to Delete Successfully', () => {
+//         add_quote.getDeleteCheckbox().click();
+//         add_quote.getExisitngName('Bulk actions').click();
+//         add_quote.getExisitngName('Delete').click();
+//         add_quote.getDeleteButton().click();
+//         menu_validations.verifyTab('quotes');
+//         quote_validations.verifyQuoteDeletion();
+//     });
+// })
+
+describe('6 - Verify Team Member Addition', () => {
+    it('Verify User is Able to Add Team Member', () => {
+        navigation_menu.getProfileButton().click();
+        navigation_menu.getProfileTab('team').click();
+        menu_validations.verifyTab('team');
     });
 })
 

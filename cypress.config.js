@@ -9,6 +9,8 @@ module.exports = defineConfig({
       baseURL: "https://factory.katanamrp.com",
       loginBaseURL: "https://katanamrp.com",
       login: "/login",
+      quote: "/quote",
+      quotes: "/quotes",
       sell: "/sales",
       make: "/manufacturingorders",
       buy: "/purchases",
