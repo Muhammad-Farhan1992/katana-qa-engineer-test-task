@@ -1,0 +1,36 @@
+Implementation:
+The implementation for current project includes three major components. These components are given below:
+	1. Visual Studio Code: It is used as an IDE for doing the automation code.
+	2. Cypress: It is used for the Web Automation/Web Testing and API Automation.
+	3. TypeScript: Programming language used with Cypress.
+Below is the directory hierarchy of the project:
+	1. fixtures: This folder contains the files used in the project. Examples are data files and payload files.
+	2. e2e: This folder contains the files related to the Test Cases. Whenever we open Cypress Window by
+	   using command "npx cypress open", "npm run api", or "npm run ui" files from this folder will be executed.
+	3. support: This folder is used for common files, business logic files, or another files we might need.
+	4. page_objects: This contains the files and functions related to the Page Object Model(POM).
+	5. common_functions: This contains the functions that are used commonly.
+	6. validation_funcitons: This contians the functions for the validations.
+
+Tools & Configurations:
+	1. IDE: Visual Studio Code
+	2. Language: TypeScript
+	3. Automation Tool: Cypress
+
+How to Setup:
+1. Download and install git from https://git-scm.com/download/win
+2. Download and install nodeJS (verison should be 12, 14, or above) from https://nodejs.org/en/download/
+3. Download and install Visual Studio Code from https://code.visualstudio.com/download
+4. Open CMD and clone the respository using following command to the desired location using:
+	a. git clone https://github.com/Muhammad-Farhan1992/katana-qa-engineer-test-task.git
+5. Open the cloned respository folder in Visual Studio Code from the location where you have saved it. 
+6. Remove the node_modules folder from the project directory.
+7. Open terminal and run the following commands:
+  1. Change to your project directory using command "cd to/project/root".
+  2. npm install
+  3. npx cypress open
+
+How to Run the Tests in Headless Mode:
+To run the test cases through CLI, open the terminal and run the following commands:
+  1. Change to your project directory using command "cd to/project/root".
+  2. npm run ui
