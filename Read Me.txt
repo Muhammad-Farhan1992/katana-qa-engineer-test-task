@@ -23,13 +23,13 @@ How to Setup:
 2. Download and install nodeJS (verison should be 12, 14, or above) from https://nodejs.org/en/download/
 3. Download and install Visual Studio Code from https://code.visualstudio.com/download
 4. Open CMD and clone the respository using following command to the desired location using:
-	a. git clone https://github.com/Muhammad-Farhan1992/katana-qa-engineer-test-task.git
+   a. git clone https://github.com/Muhammad-Farhan1992/katana-qa-engineer-test-task.git
 5. Open the cloned respository folder in Visual Studio Code from the location where you have saved it. 
 6. Remove the node_modules folder from the project directory.
 7. Open terminal and run the following commands:
-  1. Change to your project directory using command "cd to/project/root".
-  2. npm install
-  3. npx cypress open
+  a. Change to your project directory using command "cd to/project/root".
+  b. npm install
+  c. npx cypress open
 
 How to Run the Tests in Headless Mode:
 To run the test cases through CLI, open the terminal and run the following commands:
