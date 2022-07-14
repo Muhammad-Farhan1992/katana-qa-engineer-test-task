@@ -3,6 +3,7 @@ The implementation for current project includes three major components. These co
 	1. Visual Studio Code: It is used as an IDE for doing the automation code.
 	2. Cypress: It is used for the Web Automation/Web Testing and API Automation.
 	3. TypeScript: Programming language used with Cypress.
+	
 Below is the directory hierarchy of the project:
 	1. fixtures: This folder contains the files used in the project. Examples are data files and payload files.
 	2. e2e: This folder contains the files related to the Test Cases. Whenever we open Cypress Window by
