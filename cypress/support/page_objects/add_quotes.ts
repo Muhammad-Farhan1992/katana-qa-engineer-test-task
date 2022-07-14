@@ -5,7 +5,7 @@ class addQuote {
         /**
          * This function is used to get the Customer Field.
          */
-        return cy.get('input[placeholder="Search or create customer"');
+        return cy.get('input[placeholder="Search or create customer"]');
     }
 
     getField(fieldName: any){
@@ -40,7 +40,7 @@ class addQuote {
         /**
          * This function is used to get Button for Address Pop-Up.
          */
-        return cy.get('button[id="' + buttonName + '"');
+        return cy.get('button[id="' + buttonName + '"]');
     }
 
     getItemFields(fieldName: any){
